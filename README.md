@@ -42,7 +42,7 @@ Il codice si articola in due componenti principali:
 ## Interfaccia grafica
 ![Interfaccia grafica](Immagini/GUI.jpg)
 
-### Obiettivi Tecnici raggiunti
+### Obbiettivi Tecnici raggiunti
 
 - Migliorare il codice di controllo, in modo che il **veicolo sia fluido e reattivo**
 - Usare il protocollo **wifi dual band 2.4** e 5 ghz ha ridotto delay e aumentato throughput
