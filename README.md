@@ -12,8 +12,9 @@ Il progetto nasce dal recupero di una macchina radiocomandata degli anni '80, al
 
 Attualmente, tutti i dati passati tramite **MQTT** e raccolti dai sensori vengono memorizzati in un **database InfluxDB** timestamp based e utilizzati in tempo reale per la generazione di grafici e strumenti visivi di supporto alle decisioni durante il pilotaggio remoto.
 
-Un possibile sviluppo futuro del progetto consiste nell'integrare un **agente di intelligenza artificiale**, capace di analizzare i dati in tempo reale e prendere decisioni autonome sulla guida del veicolo. Questo permetterebbe di trasformare il sistema da semplice veicolo radiocomandato a piattaforma intelligente, in grado di adattarsi dinamicamente all'ambiente e migliorare l'efficienza operativa.
+Questo è reso possibile anche grazie a una progettazione **modulare**, sia lato software che lato client.
 
+Un ulteriore obiettivo, più immediato, potrebbe essere l'integrazione di un sistema di **cifratura simmetrica** (ad esempio tramite **AES**) nella comunicazione tramite socket UDP per l'invio dei comandi ai motori. Questo permetterebbe di aumentare la sicurezza delle trasmissioni, evitando che utenti non autorizzati possano prendere il controllo del veicolo inviando pacchetti al server del Raspberry Pi.
 
 
 
@@ -30,16 +31,21 @@ Il codice si articola in due componenti principali:
 
 
 
-### Obiettivi
+### Obiettivi Tecnici raggiunti
 
-- Sviluppare un sistema affidabile per il controllo remoto del veicolo.
-- Implementare una comunicazione efficiente tra il veicolo e il sistema di controllo.
-- Garantire la raccolta e la visualizzazione dei dati in tempo reale.
+- Migliorare il codice di controllo, in modo che il **veicolo sia fluido e reattivo**
+- Usare il protocollo **wifi dual band 2.4** e 5 ghz ha ridotto delay e aumentato throughput
+- Fare un sistema ON/OFF veloce da far partire, grazie alle **interfacce modulari**
+- Ottimizzare la **gestione energetica** del veicolo (2 pile LI-ION 18650 da 3V l'una)
+- Integrare **diverse configurazioni di sensori**, per avere una **qualità maggiore dei dati**
+- Rendere il sistema facilmente replicabile e documentato per **favorire la condivisione** e la collaborazione
+
+
 
 ### Tecnologie utilizzate
 
 - **Python**: Linguaggio principale per lo sviluppo del software.
-- **MQTT**: Protocollo leggero e affidabile per la comunicazione tra il veicolo e il sistema di controllo remoto.
+- **MQTT**: Protocollo leggero e affidabile per la comunicazione IoT
 - **Pygame**: Libreria per la creazione di un'interfaccia grafica intuitiva e interattiva.
 - **GStreamer**: Framework avanzato per lo streaming audio/video.
 - **Socket UDP**: Protocollo per la trasmissione di dati in tempo reale.
@@ -48,9 +54,7 @@ Il codice si articola in due componenti principali:
 - **RPi.GPIO**: Libreria per il controllo dei pin GPIO del Raspberry Pi.
 - **Adafruit CircuitPython**: Libreria per la gestione di sensori avanzati.
 - **OpenCV**: Libreria per l'elaborazione di immagini e video.
-- **Pillow**: Libreria per la manipolazione di immagini.
 - **NumPy**: Libreria per il calcolo numerico e la gestione dei dati dei sensori.
 
-Queste tecnologie lavorano insieme per creare un sistema innovativo e all'avanguardia, capace di attirare l'attenzione di chiunque sia interessato al mondo dei veicoli autonomi e del controllo remoto.
 
 Grazie per l'interesse nel mio progetto! Se hai domande o suggerimenti, non esitare a contattarmi.
