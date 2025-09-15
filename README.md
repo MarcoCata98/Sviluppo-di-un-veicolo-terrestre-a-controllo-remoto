@@ -4,9 +4,17 @@
 
 Questo progetto costituisce la mia tesi di laurea triennale in Informatica presso l'Università degli Studi di Udine, realizzata a seguito di un tirocinio svolto nel "Laboratorio di droni e sistemi autonomi". L'obiettivo principale è sviluppare un veicolo terrestre a controllo remoto, impiegando tecnologie avanzate per il controllo e la gestione dei dati.
 
+
+## Il veicolo completo
+![Veicolo terrestre a controllo remoto](Immagini/veicoloCompleto.jpg)
+
 ### Struttura del progetto
 
 Il progetto nasce dal recupero di una macchina radiocomandata degli anni '80, alla quale sono state rimosse le componenti originali per essere sostituite con tecnologie moderne. Il cuore del sistema è un **Raspberry Pi 3+**, affiancato da driver motori come **L298N** e una vasta gamma di sensori e attuatori: sensori a ultrasuoni per la rilevazione degli ostacoli, accelerometri per il monitoraggio del movimento, buzzer per segnalazioni acustiche, sensori di tensione per il controllo dell'alimentazione, oltre a videocamere e microfoni per la raccolta di dati visivi e sonori. Questa trasformazione consente di integrare funzionalità avanzate e di sperimentare soluzioni innovative nel campo dei veicoli autonomi.
+
+
+## Diagramma del sistema
+![Diagramma del sistema](Immagini/diagramma.PNG)
 
 ### Obiettivi futuri
 
@@ -17,7 +25,8 @@ Questo è reso possibile anche grazie a una progettazione **modulare**, sia lato
 Un ulteriore obiettivo, più immediato, potrebbe essere l'integrazione di un sistema di **cifratura simmetrica** (ad esempio tramite **AES**) nella comunicazione tramite socket UDP per l'invio dei comandi ai motori. Questo permetterebbe di aumentare la sicurezza delle trasmissioni, evitando che utenti non autorizzati possano prendere il controllo del veicolo inviando pacchetti al server del Raspberry Pi.
 
 
-
+## Circuito elettronico
+![Circuito elettronico](Immagini/circuito.PNG)
 
 ### Codice del progetto
 
@@ -30,6 +39,8 @@ Il codice si articola in due componenti principali:
     Include la logica per l'invio dei comandi, il broker MQTT (**Mosquitto**) e il database (**InfluxDB**). È presente anche un'**interfaccia grafica** che semplifica la gestione e l'avvio dei vari servizi.
 
 
+## Interfaccia grafica
+![Interfaccia grafica](Immagini/GUI.jpg)
 
 ### Obiettivi Tecnici raggiunti
 
@@ -41,6 +52,9 @@ Il codice si articola in due componenti principali:
 - Rendere il sistema facilmente replicabile e documentato per **favorire la condivisione** e la collaborazione
 
 
+
+## Test su strada
+![Test su strada](Immagini/strada.jpg)
 
 ### Tecnologie utilizzate
 
